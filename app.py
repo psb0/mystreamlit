@@ -1,4 +1,8 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
 
-x = st.slider('Select a Value')
-st.write(x, 'squared is', x*x)
+st.title('The title')
+st.header('The header')
+df = pd.DataFrame(np.random.random(500,2) / [50, 50] + [37.76, -122.4], columns = ['lat', 'lon'])
+st.map(df)
